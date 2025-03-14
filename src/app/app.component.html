@@ -1,14 +1,28 @@
-<div>
-  <nav>
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/lost-and-found">Lost & Found</a></li>
-      <li><a routerLink="/adoption">Adoption</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
-    </ul>
-  </nav>
 
- 
-  <router-outlet></router-outlet>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#lost-found">Lost & Found</a>
+          </li>
+      </ul>
+
+      <a class="navbar-brand mx-auto" href="#home">
+          <img src="favicon.ico" alt="Home Icon">
+      </a>
+
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="#adoption">Adoption</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
