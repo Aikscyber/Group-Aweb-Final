@@ -1,0 +1,20 @@
+.navbar-nav {
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-brand img {
+  height: 40px; /* Adjust as needed */
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+      text-align: center;
+  }
+  .navbar-nav {
+      flex-direction: column;
+  }
+  .navbar-brand {
+      order: -1;
+      margin-bottom: 10px;
+  }
+}
