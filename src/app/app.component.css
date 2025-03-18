@@ -1,10 +1,22 @@
+.navbar{
+  background-color: #0b1957;
+}
+
+.navbar a {
+  color: #fff;
+}
+
 .navbar-nav {
   flex: 1;
   justify-content: space-evenly;
   align-items: center;
+  font-family: "Pusia";
+  font-size: 24px;
+  font-weight: bolder;
 }
+
 .navbar-brand img {
-  height: 40px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
 }
 @media (max-width: 991px) {
   .navbar-collapse {
