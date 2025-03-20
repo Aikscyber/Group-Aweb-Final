@@ -1,1 +1,144 @@
+<div class="container">
+    <section class="hero text-center py-4 text-light" style="background-color: #CDB7F0;">
+        <h2>Find Your New Best Friend</h2>
+        <p>Browse our list of adorable pets waiting for a home.</p>
+        <button class="btn btn-light mt-2">Start Your Adoption Journey</button>
+    </section>
 
+    <div class="row my-4">
+     
+        <div class="col-md-4">
+            <div class="card p-3" style="background-color: #FFF5BF;">
+                <h5 class="text-dark">Categories</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Dogs</li>
+                    <li class="list-group-item">Cats</li>
+                    <li class="list-group-item">Birds</li>
+                    <li class="list-group-item">Rabbits</li>
+                    <li class="list-group-item">Reptiles</li>
+                </ul>
+            </div>
+
+             
+            <div class="card p-3 mt-4" style="background-color: #B0E4FA;">
+                <h5 class="text-dark">Why Adopt?</h5>
+                <p>By adopting a pet, you give an animal a second chance at life. They provide companionship, love, and joy!</p>
+            </div>
+        </div>
+ 
+        <div class="col-md-8">
+            <h3 class="text-center mb-4">Available Pets for Adoption</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4" *ngFor="let pet of pets">
+                    <div class="card">
+                        <img [src]="'assets/' + pet.image" class="card-img-top" [alt]="pet.name">
+                        <div class="card-body text-center" style="background-color: #F3C7E1;">
+                            <h5 class="card-title">{{ pet.name }}</h5>
+                            <p class="card-text">{{ pet.description }}</p>
+                            <button class="btn btn-dark">Adopt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
+            <div class="text-center mt-3">
+                <button class="btn btn-outline-dark">View More</button>
+            </div>
+        </div>
+    </div>
+ 
+    <section class="my-5 p-4 text-center" style="background-color: #E8E8FF; border-radius: 12px;">
+        <h3>🐾 Featured Pets of the Month</h3>
+        <p>Meet our special pets who are eagerly waiting for a loving home!</p>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="dog in street.jpg" class="card-img-top" alt="Featured Dog">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Buddy</h5>
+                        <p class="card-text">A friendly, playful dog looking for a home.</p>
+                        <button class="btn btn-dark">Adopt Buddy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="lost cat.jpg" class="card-img-top" alt="Featured Cat">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mittens</h5>
+                        <p class="card-text">A cuddly cat who loves to be around people.</p>
+                        <button class="btn btn-dark">Adopt Mittens</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="my-5 p-4 text-center" style="background-color: #C8FFC9; border-radius: 12px;">
+        <h3>How Adoption Works</h3>
+        <p>1️⃣ Browse available pets <br> 2️⃣ Submit an adoption application <br> 3️⃣ Meet your new pet <br> 4️⃣ Take them home!</p>
+    </section>
+
+  
+    <section class="my-5 p-4 text-center" style="background-color: #FFE4C4; border-radius: 12px;">
+        <h3>🎉 Why Choose Adoption?</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>❤️ Save a Life</h5>
+                <p>Each adoption provides a second chance to an animal in need.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>🐶 Unconditional Love</h5>
+                <p>Pets bring companionship, joy, and lifelong friendship.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>💰 Cost-Effective</h5>
+                <p>Adopting is much cheaper than buying from breeders.</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="my-5 p-4 text-center">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>What do I need to adopt?</h5>
+                <p>You need to provide valid identification, proof of residence, and fill out an adoption application.</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Are all pets vaccinated?</h5>
+                <p>Yes! All our pets receive proper medical check-ups, vaccinations, and are spayed/neutered before adoption.</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="my-5 p-4 text-center">
+        <h3>Happy Adoption Stories</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3" style="background-color: #FFF5BF;">
+                    <p>"Adopting Max was the best decision! He brings so much joy to our home." - Emily R.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3" style="background-color: #B0E4FA;">
+                    <p>"Mittens has become my best friend. Thank you for this wonderful service!" - Jake M.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3" style="background-color: #F3C7E1;">
+                    <p>"Our family is now complete with Buddy, our adopted dog." - Sarah L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="text-center py-5" style="background-color: #FFCCCC;">
+        <h3>🐶 Ready to Find Your New Best Friend?</h3>
+        <p>Start your adoption journey today and give a loving pet a forever home.</p>
+        <button class="btn btn-dark">Browse Pets</button>
+    </section>
+</div>

@@ -15,12 +15,30 @@
     <section class="listings py-5">
         <h2 class="text-center">Recently Lost & Found Animals</h2>
         <div class="row">
-            <div class="col-md-4" *ngFor="let item of lostAndFound">
+            <div class="col-md-4">
                 <div class="card">
-                    <img [src]="item.image" class="card-img-top" alt="Lost Animal">
+                    <img src="assets/lost1.jpg" class="card-img-top" alt="Lost Dog">
                     <div class="card-body">
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        <p class="card-text">{{ item.description }}</p>
+                        <h5 class="card-title">Lost Dog</h5>
+                        <p class="card-text">Small brown dog lost near Central Park.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/lost2.jpg" class="card-img-top" alt="Found Cat">
+                    <div class="card-body">
+                        <h5 class="card-title">Found Cat</h5>
+                        <p class="card-text">Grey tabby cat found near the subway station.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/lost3.jpg" class="card-img-top" alt="Lost Parrot">
+                    <div class="card-body">
+                        <h5 class="card-title">Lost Parrot</h5>
+                        <p class="card-text">Green parrot last seen in downtown area.</p>
                     </div>
                 </div>
             </div>
@@ -31,12 +49,30 @@
     <section class="more-listings py-5 text-center" style="background-color: #f3c7e1;">
         <h2>More Listings</h2>
         <div class="row">
-            <div class="col-md-4" *ngFor="let item of moreListings">
+            <div class="col-md-4">
                 <div class="card">
-                    <img [src]="item.image" class="card-img-top" alt="Animal">
+                    <img src="assets/found1.jpg" class="card-img-top" alt="Found Puppy">
                     <div class="card-body">
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        <p class="card-text">{{ item.description }}</p>
+                        <h5 class="card-title">Found Puppy</h5>
+                        <p class="card-text">Golden retriever puppy found in the park.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/found2.jpg" class="card-img-top" alt="Lost Rabbit">
+                    <div class="card-body">
+                        <h5 class="card-title">Lost Rabbit</h5>
+                        <p class="card-text">White rabbit lost near the playground.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/found3.jpg" class="card-img-top" alt="Found Turtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Found Turtle</h5>
+                        <p class="card-text">Turtle found in the lake area.</p>
                     </div>
                 </div>
             </div>
