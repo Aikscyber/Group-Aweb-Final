@@ -4,6 +4,8 @@ import { ContactComponent } from './contact/contact.component';
 import { LostAndFoundComponent } from './lost-and-found/lost-and-found.component';
 import { AdaptionComponent } from './adaption/adaption.component';
 import { HomeComponent } from './home/home.component';
+import { provideHttpClient } from '@angular/common/http';
+
 
 export const routes: Routes = [  // ✅ Ensure routes is exported
   { path: '', component: HomeComponent },
@@ -12,3 +14,7 @@ export const routes: Routes = [  // ✅ Ensure routes is exported
   { path: 'lost-and-found', component: LostAndFoundComponent },
   { path: 'adaption', component: AdaptionComponent },
 ];
+
+export const appConfig = {
+  providers: [provideHttpClient()] // Fix for HttpClient issue
+};
