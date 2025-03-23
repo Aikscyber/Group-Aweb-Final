@@ -1,0 +1,60 @@
+<div class="container-fluid p-0">
+    <!-- Hero Section -->
+    <div class="hero-image text-center text-white d-flex align-items-center justify-content-center">
+    </div>
+
+    <!-- Sub-header Section -->
+    <div class="container-fluid my-5 px-4 text-center">
+        <h1 class="fw-bold mainHeader">Lost & Found Animals</h1>
+    </div>
+
+    <!-- Lost Animals Section -->
+    <div class="container my-5 lost-section">
+        <h2 class="text-center section-title">🐾 Lost Animals 🐾</h2>
+        <div class="scrollable-container">
+            <div class="grid-container">
+                <div class="card lost-card" *ngFor="let animal of lostAnimals">
+                    <img [src]="animal.image" class="card-img-top" [alt]="animal.name">
+                    <div class="card-body">
+                        <h5 class="card-title" (click)="toggleExpand(animal)">
+                            {{ animal.name }}
+                        </h5>
+                    </div>
+                    <div class="expandable-info" [class.show]="animal.expanded">
+                        <p><strong>Breed:</strong> {{animal.breed}}</p>
+                        <p><strong>Age:</strong> {{animal.age}}</p>
+                        <p><strong>Color:</strong> {{animal.color}}</p>
+                        <p><strong>Gender:</strong> {{animal.gender}}</p>
+                        <p><strong>Behavior:</strong> {{animal.behavior}}</p>
+                        <p><strong>Category:</strong> {{animal.category}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Found Animals Section -->
+    <div class="container my-5 found-section">
+        <h2 class="text-center section-title">🌤️ Found Animals 🌤️</h2>
+        <div class="scrollable-container">
+            <div class="grid-container">
+                <div class="card found-card" *ngFor="let animal of foundAnimals">
+                    <img [src]="animal.image" class="card-img-top" [alt]="animal.name">
+                    <div class="card-body">
+                        <h5 class="card-title" (click)="toggleExpand(animal)">
+                            {{ animal.name }}
+                        </h5>
+                    </div>
+                    <div class="expandable-info" [class.show]="animal.expanded">
+                        <p><strong>Breed:</strong> {{animal.breed}}</p>
+                        <p><strong>Age:</strong> {{animal.age}}</p>
+                        <p><strong>Color:</strong> {{animal.color}}</p>
+                        <p><strong>Gender:</strong> {{animal.gender}}</p>
+                        <p><strong>Behavior:</strong> {{animal.behavior}}</p>
+                        <p><strong>Category:</strong> {{animal.category}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

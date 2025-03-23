@@ -1,0 +1,126 @@
+<div class="container mt-5">
+    <h2 class="text-center">Animal Adoption</h2>
+
+    <div class="row">
+        <!-- Left Column: Adoption Form -->
+        <div class="col-md-7">
+            <form (ngSubmit)="submitForm()">
+                <!-- Animal Selection -->
+                <div class="mb-3">
+                    <label class="form-label">Choose an animal:</label>
+                    <select class="form-select" [(ngModel)]="selectedAnimal" name="selectedAnimal" required>
+                        <option value="" disabled selected>Select an animal</option>
+                        <option *ngFor="let animal of availableAnimals" [value]="animal">{{ animal }}</option>
+                    </select>
+                </div>
+
+                <h3 class="mt-4">Adopter's Information</h3>
+
+                <div class="mb-3">
+                    <label class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" [(ngModel)]="adopter.fullName" name="fullName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address:</label>
+                    <input type="email" class="form-control" [(ngModel)]="adopter.email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Address:</label>
+                    <textarea class="form-control" rows="2" [(ngModel)]="adopter.address" name="address" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Phone Number:</label>
+                    <input type="tel" class="form-control" [(ngModel)]="adopter.phone" name="phone" required>
+                </div>
+
+                <!-- Pets at Home -->
+                <div class="mb-3">
+                    <label>Do you have pets at home?</label>
+                    <div>
+                        <input type="radio" name="hasPets" value="yes" [(ngModel)]="adopter.hasPets"> Yes
+                        <input type="radio" name="hasPets" value="no" [(ngModel)]="adopter.hasPets"> No
+                    </div>
+                    <label *ngIf="adopter.hasPets === 'yes'" class="mt-2">If yes, list them:</label>
+                    <input *ngIf="adopter.hasPets === 'yes'" type="text" class="form-control" [(ngModel)]="adopter.petList" name="petList">
+                </div>
+
+                <!-- Children at Home -->
+                <div class="mb-3">
+                    <label>Do you have children?</label>
+                    <div>
+                        <input type="radio" name="hasChildren" value="yes" [(ngModel)]="adopter.hasChildren"> Yes
+                        <input type="radio" name="hasChildren" value="no" [(ngModel)]="adopter.hasChildren"> No
+                    </div>
+                    <label *ngIf="adopter.hasChildren === 'yes'" class="mt-2">If yes, what are their ages?</label>
+                    <input *ngIf="adopter.hasChildren === 'yes'" type="text" class="form-control" [(ngModel)]="adopter.childrenAges" name="childrenAges">
+                </div>
+
+                <!-- Home Ownership -->
+                <div class="mb-3">
+                    <label>Do you own or rent your home?</label>
+                    <div>
+                        <input type="radio" name="homeType" value="own" [(ngModel)]="adopter.homeType"> Own
+                        <input type="radio" name="homeType" value="rent" [(ngModel)]="adopter.homeType"> Rent
+                    </div>
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="d-flex gap-3 pb-4">
+                    <button type="submit" class="btn btn-primary">Submit Adoption Request</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteAdoption()">Delete Adoption</button>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Column: Agreement -->
+        <div class="col-md-5">
+            <div class="p-4 border bg-light">
+                <h4>Commitment Form</h4>
+                <div class="mb-3">
+                    <label>Why do you want to adopt this pet?</label>
+                    <textarea class="form-control" rows="2" [(ngModel)]="adopter.reason" name="reason"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label>Where will the pet be kept?</label><br>
+                    <input type="radio" name="petLocation" value="indoors" [(ngModel)]="adopter.petLocation"> Indoors
+                    <input type="radio" name="petLocation" value="outdoors" [(ngModel)]="adopter.petLocation"> Outdoors
+                </div>
+
+                <div class="mb-3">
+                    <label>Do you have a fenced yard?</label><br>
+                    <input type="radio" name="fencedYard" value="yes" [(ngModel)]="adopter.fencedYard"> Yes
+                    <input type="radio" name="fencedYard" value="no" [(ngModel)]="adopter.fencedYard"> No
+                </div>
+
+                <div class="mb-3">
+                    <label>How many hours will the pet be alone daily?</label>
+                    <input type="number" class="form-control" [(ngModel)]="adopter.aloneHours" name="aloneHours">
+                </div>
+
+                <h5>📋 Adoption Agreement</h5>
+
+                <div>
+                    <input type="checkbox" [(ngModel)]="adopter.agreement1" name="agreement1" (change)="enableNextCheckbox(1)">
+                    I agree to provide proper care, shelter, and medical attention for this pet.
+                </div>
+
+                <div>
+                    <input type="checkbox" [(ngModel)]="adopter.agreement2" name="agreement2" [disabled]="!adopter.agreement1" (change)="enableNextCheckbox(2)">
+                    I understand that this adoption is a lifelong commitment.
+                </div>
+
+                <div>
+                    <input type="checkbox" [(ngModel)]="adopter.agreement3" name="agreement3" [disabled]="!adopter.agreement2">
+                    I allow a home visit as part of the adoption process.
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

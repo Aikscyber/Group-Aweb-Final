@@ -1,0 +1,5 @@
+.btn-danger {
+    width: auto; /* Let it adjust based on content */
+    padding: 6px 12px; /* Adjust padding to match Submit button */
+    font-size: 14px; /* Make text smaller */
+}

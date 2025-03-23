@@ -1,0 +1,55 @@
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.list-group-item {
+    background-color: #B0E4FA;
+    border: none;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+section {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.testimonials .card {
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.hero h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.scrollable-container {
+    max-height: 900px; 
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    padding-right: 10px; 
+}
+
+.row {
+    margin-right: 0 !important; 
+    margin-left: 0 !important;
+}
+
+
+

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+/* app.component.css */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@font-face {
+  font-family: 'Pusia';
+  src:url('assets/fonts/Pusia\ Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Pusia";
+}

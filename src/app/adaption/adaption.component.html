@@ -1,0 +1,119 @@
+
+<div class="container-fluid p-0"> 
+    <div class="hero text-center py-4 text-light" style="background-color: #CDB7F0;">
+        <h2 class="w-100 text-center m-0">Find Your New Best Friend</h2>
+        <p>Browse our list of adorable pets waiting for a home.</p>
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-4">
+            <div class="card p-3" style="background-color: #FFF5BF;">
+                <h5 class="text-dark">Categories</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Dogs</li>
+                    <li class="list-group-item">Cats</li>
+                    <li class="list-group-item">Birds</li>
+                    <li class="list-group-item">Rabbits</li>
+                    <li class="list-group-item">Reptiles</li>
+                </ul>
+            </div>
+
+            <div class="card p-3 mt-4" style="background-color: #B0E4FA;">
+                <h5 class="text-dark">Why Choose Adoption?</h5>
+                <p>By adopting a pet, you give an animal a second chance at life. They provide companionship, love, and joy!</p>
+                <h5>❤️ Save a Life</h5>
+                <p>Each adoption provides a second chance to an animal in need.</p>
+                <h5>🐶 Unconditional Love</h5>
+                <p>Pets bring companionship, joy, and lifelong friendship.</p>
+                <h5>💰 Cost-Effective</h5>
+                <p>Adopting is much cheaper than buying from breeders.</p>
+            </div>
+
+            <div class="my-4 p-4 text-center" style="background-color: #C8FFC9; border-radius: 12px;">
+                <h3>How Adoption Works</h3>
+                <p>1️⃣ Browse available pets <br> 2️⃣ Submit an adoption application <br> 3️⃣ Meet your new pet <br> 4️⃣ Take them home!</p>
+            </div>
+        
+        </div>
+
+        <div class="col-md-8">
+            <h3 class="text-center mb-4">Available Pets for Adoption</h3>
+    
+            <div class="scrollable-container">
+                <div class="row">
+                    <div class="col-md-4 mb-4" *ngFor="let pet of pets">
+                        <div class="card">
+                            <img [src]="'assets/' + pet.image" class="card-img-top" [alt]="pet.name">
+                            <div class="card-body text-center" style="background-color: #F3C7E1;">
+                                <h5 class="card-title">{{ pet.name }}</h5>
+                                <p class="card-text">{{ pet.description }}</p>
+                                <button class="btn btn-dark" [routerLink]="['/adoptform']">
+                                    Adopt
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <section class="my-5 p-4 text-center" style="background-color: #E8E8FF; border-radius: 12px;">
+        <h3>🐾 Newest Aniamls For Adoption</h3>
+        <p>Meet our special pets who are eagerly waiting for a loving home!</p>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="dog in street.jpg" class="card-img-top" alt="Featured Dog">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Buddy</h5>
+                        <p class="card-text">A friendly, playful dog looking for a home.</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="lost cat.jpg" class="card-img-top" alt="Featured Cat">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mittens</h5>
+                        <p class="card-text">A cuddly cat who loves to be around people.</p>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="oreo.jpg" class="card-img-top" alt="Featured Cat">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oreo</h5>
+                        <p class="card-text">A lovable dog who wants to join your journey.</p>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 p-4 text-center">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>What do I need to adopt?</h5>
+                <p>You need to provide valid identification, proof of residence, and fill out an adoption application.</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Are all pets vaccinated?</h5>
+                <p>Yes! All our pets receive proper medical check-ups, vaccinations, and are spayed/neutered before adoption.</p>
+            </div>
+        </div>
+    </section>
+</div>
